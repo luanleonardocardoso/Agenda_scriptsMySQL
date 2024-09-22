@@ -1,0 +1,14 @@
+-- Script para criar banco de dados mysql
+CREATE DATABASE IF NOT EXISTS schedule;
+USE schedule;
+
+-- Script para criar tabela de apontamentos 
+CREATE TABLE IF NOT EXISTS appointments (
+    idSchedule INT NOT NULL AUTO_INCREMENT,
+    daySchedule DATE NOT NULL,
+    initialScheduledTime VARCHAR(8) NOT NULL,
+    finalScheduledTime VARCHAR(8) NOT NULL,
+    description VARCHAR(255) DEFAULT NULL,
+    PRIMARY KEY (idSchedule)
+);
+
